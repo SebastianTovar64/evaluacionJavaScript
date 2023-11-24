@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración meta para la codificación del documento y la escala inicial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlace al archivo de estilo externo -->
+    <link rel="stylesheet" href="/style/style2.css">
+
+    <!-- Enlaces a las fuentes de Google Fonts utilizadas en el estilo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Noto+Sans+Mandaic&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Título de la página -->
+    <title>Document</title>
+</head>
+<body>
+    <!-- Formulario para la información de entrega -->
+    <form id="delivery-info-form">
+        <h2>Datos de contacto</h2>
+
+        <!-- Campo de entrada para el nombre del cliente -->
+        <label for="customer-name">Nombre:</label>
+        <input type="text" id="customer-name" name="customer-name" placeholder="Ingrese su nombre" required>
+
+        <!-- Campo de entrada para los apellidos del cliente -->
+        <label for="customer-name">Apellidos:</label>
+        <input type="text" id="customer-name" name="customer-name" placeholder="Ingrese sus Apellidos" required>
+
+        <!-- Campo de entrada para el número de teléfono del cliente -->
+        <label for="customer-phone">Telefono:</label>
+        <input type="text" id="customer-phone" name="customer-phone" pattern="[0-9]{10}" placeholder="Ingrese un numero de telefono valido" required>
+
+        <!-- Campo de entrada para la dirección del cliente -->
+        <label for="customer-address">Direccion:</label>
+        <input type="text" id="customer-address" name="customer-address" placeholder="Ingrese su direccion" required>
+
+        <!-- Campo de entrada para el correo electrónico del cliente -->
+        <label for="customer-email">Ingrese su correo</label>
+        <input type="email" id="customer-email" name="customer-email" placeholder="Ingrese su correo" required>
+
+        <!-- Campo de entrada para confirmar el correo electrónico del cliente -->
+        <label for="customer-email">Repita su correo</label>
+        <input type="email" id="customer-email" name="customer-email" placeholder="Confirme su correo" required><br>
+
+        <!-- Botón para enviar la información del cliente -->
+        <button type="submit" id="submit-delivery-info">Confirmar pedido</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración meta para la codificación del documento y la escala inicial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlace al archivo de estilo externo -->
+    <link rel="stylesheet" href="/style/style.css">
+
+    <!-- Enlaces a las fuentes de Google Fonts utilizadas en el estilo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Noto+Sans+Mandaic&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Título de la página -->
+    <title>Pedido a Domicilio</title>
+</head>
+<body>
+    <!-- Contenedor principal de la aplicación -->
+    <div id="app">
+        <!-- Encabezado con el logotipo -->
+        <header>
+            <img src="/img/logo2.png">
+        </header>
+
+        <!-- Formulario para realizar el pedido a domicilio -->
+        <form id="order-form">
+            <!-- Selector para elegir el restaurante -->
+            <label for="select-restaurant">Seleccione el restaurante:</label>
+            <select id="select-restaurant" name="select-restaurant">
+                <option value="Seleccione">-Seleccione una opcion-</option>
+                <option value="LaBaranda">La Baranda</option>
+                <option value="Dominos">Dominos</option>
+                <option value="RapidoBiteExpress">RapidoBite Express</option>
+                <option value="SaborVeloz">SaborVeloz</option>
+                <option value="TurboTacos">TurboTacos</option>
+                <option value="HotDogJet">HotDog Jet</option>
+                <option value="SaboresExpress">SaboresExpress</option>
+            </select>
+
+            <!-- Selector para elegir el plato de comida -->
+            <label for="select-product">Seleccione el plato de comida:</label>
+            <select id="select-product" name="select-product">
+                <option value="Seleccione">-Seleccione una opcion-</option>
+                <option value="pizza">Pizza</option>
+                <option value="hamburguesa">Hamburguesa</option>
+                <option value="mazorcada">Mazorcada</option>
+                <option value="pataconas">Pataconas</option>
+                <option value="alitas">Alitas</option>
+                <option value="costillas">Costillas</option>
+                <option value="nachos">Nachos</option>
+            </select>
+
+            <!-- Campo de entrada para la cantidad del plato de comida -->
+            <label for="product-quantity">Cantidad:</label>
+            <input type="number" id="product-quantity" name="product-quantity" min="1" value="0">
+
+            <!-- Selector para elegir la bebida -->
+            <label for="select-additional-item">Seleccione la bebida:</label>
+            <select id="select-additional-item" name="select-additional-item">
+                <option value="Seleccione">-Seleccione una opcion-</option>
+                <option value="agua">Agua</option>
+                <option value="Gaseosa">Gaseosa</option>
+                <option value="cerveza">Cerveza</option>
+                <option value="limonada">Limonada</option>
+            </select>
+
+            <!-- Campo de entrada para la cantidad de la bebida -->
+            <label for="additional-item-quantity">Cantidad:</label>
+            <input type="number" id="additional-item-quantity" name="additional-item-quantity" min="1" value="0">
+
+            <!-- Sección para el resumen del pedido -->
+            <div id="order-summary">
+                <h2>Resumen del Pedido</h2>
+                <!-- Lista para mostrar los elementos del pedido -->
+                <ul id="order-list"></ul>
+                <!-- Muestra el precio total del pedido -->
+                <div id="total-price">Total: $0</div>
+            </div>
+
+            <!-- Grupo de botones con estilo de triángulo -->
+            <div id="triangle-buttons">
+                <button type="button" id="add-to-order">Agregar al Pedido</button>
+                <button type="button" id="clear-form">Limpiar Formulario</button>
+                <button type="submit" id="submit-order">Enviar Pedido</button>
+            </div>
+        </form> <!-- Fin del formulario de pedido -->
+    </div>
+
+    <!-- Enlace al script de JavaScript -->
+    <script src="/js/domicilios.js"></script>
+</body>
+</html>
